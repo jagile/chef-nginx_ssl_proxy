@@ -62,7 +62,7 @@ cert_key_pairs.each do |ckp|
     owner  "root"
     group  "root"
     mode   0600
-    variables(:content => ckp["cert"].join("\n"))
+    variables(:content => ckp["crt"].join("\n"))
   end 
 
   # Write the .key file, eg: /etc/nginx/ssl/foo.key
